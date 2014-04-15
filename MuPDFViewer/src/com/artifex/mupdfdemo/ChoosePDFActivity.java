@@ -210,6 +210,7 @@ public class ChoosePDFActivity extends ListActivity {
 		switch (mPurpose) {
 		case PickPDF:
 			// Start an activity to display the PDF file
+			intent.putExtra("firstView", true);
 			startActivity(intent);
 			break;
 		case PickKeyFile:

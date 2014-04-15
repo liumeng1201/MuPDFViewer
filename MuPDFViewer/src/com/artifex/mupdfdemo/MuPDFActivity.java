@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.net.Uri;
@@ -60,6 +61,7 @@ public class MuPDFActivity extends Activity implements
 	private AsyncTask<Void, Void, MuPDFAlert> mAlertTask;
 	private AlertDialog mAlertDialog;
 	private FilePicker mFilePicker;
+	private boolean firstView;
 
 	public void createAlertWaiter() {
 		mAlertsActive = true;
@@ -214,6 +216,7 @@ public class MuPDFActivity extends Activity implements
 		}
 		if (core == null) {
 			Intent intent = getIntent();
+			firstView = intent.getBooleanExtra("firstView", false);
 			byte buffer[] = null;
 			if (Intent.ACTION_VIEW.equals(intent.getAction())) {
 				Uri uri = intent.getData();
@@ -408,7 +411,13 @@ public class MuPDFActivity extends Activity implements
 
 		// Reenstate last state if it was recorded
 		SharedPreferences prefs = getPreferences(Context.MODE_PRIVATE);
-		mDocView.setDisplayedViewIndex(prefs.getInt("page" + mFileName, 0));
+		// 第一次进入从头开始阅读
+		if (firstView) {
+			mDocView.setDisplayedViewIndex(0);
+			firstView = false;
+		} else {
+			mDocView.setDisplayedViewIndex(prefs.getInt("page" + mFileName, 0));
+		}
 
 		if (savedInstanceState == null
 				|| !savedInstanceState.getBoolean("ButtonsHidden", false))
@@ -498,6 +507,7 @@ public class MuPDFActivity extends Activity implements
 			mAlertTask = null;
 		}
 		core = null;
+		
 		super.onDestroy();
 	}
 
