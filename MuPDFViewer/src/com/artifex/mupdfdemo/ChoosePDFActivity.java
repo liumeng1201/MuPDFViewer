@@ -62,8 +62,7 @@ public class ChoosePDFActivity extends ListActivity {
 		}
 
 		if (mDirectory == null)
-			mDirectory = Environment
-					.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+			mDirectory = Environment.getExternalStorageDirectory();
 
 		// Create a list adapter...
 		adapter = new ChoosePDFAdapter(getLayoutInflater());
