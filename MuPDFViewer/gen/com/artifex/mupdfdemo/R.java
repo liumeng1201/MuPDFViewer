@@ -63,47 +63,17 @@ public final class R {
         public static final int tiled_background=0x7f02001f;
     }
     public static final class id {
-        public static final int acceptButton=0x7f08001f;
-        public static final int annotType=0x7f08001e;
-        public static final int cancelAcceptButton=0x7f08001d;
-        public static final int cancelAnnotButton=0x7f08000e;
-        public static final int cancelDeleteButton=0x7f080014;
-        public static final int cancelMoreButton=0x7f080018;
-        public static final int cancelSearch=0x7f080009;
-        public static final int copyTextButton=0x7f08001a;
-        public static final int deleteButton=0x7f080016;
-        public static final int deleteLabel=0x7f080015;
-        public static final int docNameText=0x7f080002;
-        public static final int editAnnotButton=0x7f08001b;
-        public static final int highlightButton=0x7f08000f;
-        public static final int icon=0x7f080026;
-        public static final int info=0x7f080023;
-        public static final int inkButton=0x7f080012;
-        public static final int linkButton=0x7f080003;
-        public static final int lowerButtons=0x7f080020;
-        public static final int moreButton=0x7f080007;
-        public static final int name=0x7f080027;
-        public static final int outlineButton=0x7f080005;
-        public static final int page=0x7f080025;
-        public static final int pageNumber=0x7f080022;
-        public static final int pageSlider=0x7f080021;
-        public static final int printButton=0x7f080019;
-        public static final int reflowButton=0x7f080004;
-        public static final int searchBack=0x7f08000b;
-        public static final int searchButton=0x7f080006;
-        public static final int searchForward=0x7f08000c;
-        public static final int searchText=0x7f08000a;
-        public static final int strikeOutButton=0x7f080011;
+        public static final int docNameText=0x7f080001;
+        public static final int icon=0x7f080008;
+        public static final int info=0x7f080005;
+        public static final int lowerButtons=0x7f080002;
+        public static final int name=0x7f080009;
+        public static final int page=0x7f080007;
+        public static final int pageNumber=0x7f080004;
+        public static final int pageSlider=0x7f080003;
         public static final int switcher=0x7f080000;
-        public static final int title=0x7f080024;
-        public static final int topBar0Main=0x7f080001;
-        public static final int topBar1Search=0x7f080008;
-        public static final int topBar2Annot=0x7f08000d;
-        public static final int topBar3Delete=0x7f080013;
-        public static final int topBar4More=0x7f080017;
-        public static final int topBar5Accept=0x7f08001c;
-        public static final int underlineButton=0x7f080010;
-        public static final int webview=0x7f080028;
+        public static final int title=0x7f080006;
+        public static final int webview=0x7f08000a;
     }
     public static final class layout {
         public static final int buttons=0x7f030000;
