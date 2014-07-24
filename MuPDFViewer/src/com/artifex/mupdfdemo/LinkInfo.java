@@ -1,5 +1,6 @@
 package com.artifex.mupdfdemo;
 
+
 import android.graphics.RectF;
 
 public class LinkInfo {
