@@ -90,8 +90,8 @@ public class ChoosePDFActivity extends Activity implements
 		/* 有米广告start */
 		// 初始化接口，应用启动的时候调用
 		// 参数：appId, appSecret, 调试模式
-		AdManager.getInstance(this).init("73dbed9e41562e15",
-				"667d7d2a3fcbd396", false);
+		AdManager.getInstance(this).init("a21f956d0b31093e",
+				"ba177eddaafde91e", false);
 
 		// 实例化LayoutParams(重要)
 		FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
@@ -210,9 +210,28 @@ public class ChoosePDFActivity extends Activity implements
 				for (File f : mDirs)
 					adapter.add(new ChoosePDFItem(ChoosePDFItem.Type.DIR, f
 							.getName()));
-				for (File f : mFiles)
-					adapter.add(new ChoosePDFItem(ChoosePDFItem.Type.DOC, f
-							.getName()));
+				for (File f : mFiles) {
+					String fname = f.getName().toLowerCase();
+					if (fname.endsWith(".pdf")) {
+						adapter.add(new ChoosePDFItem(ChoosePDFItem.Type.PDF, f
+								.getName()));
+					}
+					if (fname.endsWith(".xps") || fname.endsWith(".cbz")
+							|| fname.endsWith(".jfif")
+							|| fname.endsWith(".jfif-tbnl")
+							|| fname.endsWith(".tif")
+							|| fname.endsWith(".tiff")
+							|| fname.endsWith(".pfx")) {
+						adapter.add(new ChoosePDFItem(
+								ChoosePDFItem.Type.DOCOTHER, f.getName()));
+					}
+					if (fname.endsWith(".png") || fname.endsWith(".jpe")
+							|| fname.endsWith(".jpeg")
+							|| fname.endsWith(".jpg")) {
+						adapter.add(new ChoosePDFItem(ChoosePDFItem.Type.IMG, f
+								.getName()));
+					}
+				}
 
 				lastPosition();
 			}
