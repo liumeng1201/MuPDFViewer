@@ -51,4 +51,5 @@
 	<string name="toggle_links">高亮并启用墨迹</string>
 	<string name="underline">下划线</string>
 	<string name="yes">是</string>
+	<string name="action_about">关于</string>
 </resources>

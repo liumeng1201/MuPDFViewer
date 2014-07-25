@@ -27,11 +27,14 @@ import android.os.FileObserver;
 import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 enum Purpose {
 	PickPDF, PickKeyFile
@@ -305,4 +308,18 @@ public class ChoosePDFActivity extends Activity implements
 				filelist.getFirstVisiblePosition());
 	}
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.main, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if (item.getItemId() == R.id.action_about) {
+			Toast.makeText(ChoosePDFActivity.this, "About", Toast.LENGTH_SHORT).show();
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
 }
