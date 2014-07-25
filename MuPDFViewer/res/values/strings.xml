@@ -2,7 +2,7 @@
 <resources>
 	<string name="app_name">Simple PDF Reader</string>
 	<!-- 1.4 (git build) -->
-	<string name="version">  </string>
+	<string name="version" translatable="false">  </string>
 	<string name="no_media_warning">Storage media not present</string>
 	<string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
 	<string name="cancel">Cancel</string>
@@ -53,5 +53,5 @@
 	<string name="accept">Accept</string>
 	<string name="copy_text">copy text</string>
 	<string name="format_currently_not_supported">Format currently not supported</string>
-	<string name="toggle_reflow_mode">Toggle reflow mode</string>
+	<string name="toggle_reflow_mode" translatable="false">Toggle reflow mode</string>
 </resources>

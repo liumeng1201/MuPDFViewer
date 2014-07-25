@@ -105,24 +105,26 @@ public class ChoosePDFActivity extends Activity implements
 		adviewContainer.addView(adView, layoutParams);
 
 		// 监听广告条接口
+		/*
 		adView.setAdListener(new AdViewListener() {
 
 			@Override
 			public void onSwitchedAd(AdView arg0) {
-//				Log.i("YoumiAdDemo", "广告条切换");
+				Log.i("YoumiAdDemo", "广告条切换");
 			}
 
 			@Override
 			public void onReceivedAd(AdView arg0) {
-//				Log.i("YoumiAdDemo", "请求广告成功");
+				Log.i("YoumiAdDemo", "请求广告成功");
 
 			}
 
 			@Override
 			public void onFailedToReceivedAd(AdView arg0) {
-//				Log.i("YoumiAdDemo", "请求广告失败");
+				Log.i("YoumiAdDemo", "请求广告失败");
 			}
 		});
+		*/
 		/* 有米广告end */
 
 		// ...that is updated dynamically when files are scanned
