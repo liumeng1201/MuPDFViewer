@@ -66,30 +66,28 @@ public final class R {
         public static final int tiled_background=0x7f020022;
     }
     public static final class id {
-        public static final int about_res=0x7f090000;
-        public static final int action_about=0x7f09000e;
-        public static final int adview=0x7f090007;
-        public static final int docNameText=0x7f090002;
-        public static final int filemanager=0x7f090008;
-        public static final int icon=0x7f09000b;
-        public static final int info=0x7f090006;
-        public static final int lowerButtons=0x7f090003;
-        public static final int name=0x7f09000c;
-        public static final int page=0x7f09000a;
-        public static final int pageNumber=0x7f090005;
-        public static final int pageSlider=0x7f090004;
-        public static final int switcher=0x7f090001;
-        public static final int title=0x7f090009;
-        public static final int webview=0x7f09000d;
+        public static final int action_about=0x7f09000d;
+        public static final int adview=0x7f090006;
+        public static final int docNameText=0x7f090001;
+        public static final int filemanager=0x7f090007;
+        public static final int icon=0x7f09000a;
+        public static final int info=0x7f090005;
+        public static final int lowerButtons=0x7f090002;
+        public static final int name=0x7f09000b;
+        public static final int page=0x7f090009;
+        public static final int pageNumber=0x7f090004;
+        public static final int pageSlider=0x7f090003;
+        public static final int switcher=0x7f090000;
+        public static final int title=0x7f090008;
+        public static final int webview=0x7f09000c;
     }
     public static final class layout {
-        public static final int about_dialog=0x7f030000;
-        public static final int buttons=0x7f030001;
-        public static final int main=0x7f030002;
-        public static final int outline_entry=0x7f030003;
-        public static final int picker_entry=0x7f030004;
-        public static final int print_dialog=0x7f030005;
-        public static final int textentry=0x7f030006;
+        public static final int buttons=0x7f030000;
+        public static final int main=0x7f030001;
+        public static final int outline_entry=0x7f030002;
+        public static final int picker_entry=0x7f030003;
+        public static final int print_dialog=0x7f030004;
+        public static final int textentry=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f080000;
