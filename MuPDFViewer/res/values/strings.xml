@@ -55,4 +55,6 @@
 	<string name="format_currently_not_supported">Format currently not supported</string>
 	<string name="toggle_reflow_mode" translatable="false">Toggle reflow mode</string>
 	<string name="action_about">About</string>
+	
+	<string name="about_res">This project based on the open source project MuPDF, just modify something and the App logo.\nMuPDF website : http://www.mupdf.com/\nMuPDF download website : http://www.mupdf.com/downloads/\nThe souce codes of this App : https://github.com/liumeng1201/MuPDFViewer</string>
 </resources>

@@ -52,4 +52,6 @@
 	<string name="underline">下划线</string>
 	<string name="yes">是</string>
 	<string name="action_about">关于</string>
+	
+	<string name="about_res">本应用以开源的MuPDF为基础，进行了部分微小修改，本项目Logo也以MuPDF为基础进行了修改。\nMuPDF项目网址：http://www.mupdf.com/\nMuPDF项目下载地址：http://www.mupdf.com/downloads/\n本应用源码下载地址：https://github.com/liumeng1201/MuPDFViewer</string>
 </resources>

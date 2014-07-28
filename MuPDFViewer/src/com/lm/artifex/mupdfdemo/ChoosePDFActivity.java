@@ -7,13 +7,9 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.lm.artifex.mupdfdemo.R;
-
 import net.youmi.android.AdManager;
 import net.youmi.android.banner.AdSize;
 import net.youmi.android.banner.AdView;
-import net.youmi.android.banner.AdViewListener;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -25,7 +21,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.FileObserver;
 import android.os.Handler;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,14 +29,13 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.FrameLayout;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 enum Purpose {
 	PickPDF, PickKeyFile
 }
 
-public class ChoosePDFActivity extends Activity implements
-		OnItemClickListener {
+public class ChoosePDFActivity extends Activity implements OnItemClickListener {
 	private ListView filelist;
 	private FrameLayout adviewContainer;
 	static private File mDirectory;
@@ -109,25 +103,19 @@ public class ChoosePDFActivity extends Activity implements
 
 		// 监听广告条接口
 		/*
-		adView.setAdListener(new AdViewListener() {
-
-			@Override
-			public void onSwitchedAd(AdView arg0) {
-				Log.i("YoumiAdDemo", "广告条切换");
-			}
-
-			@Override
-			public void onReceivedAd(AdView arg0) {
-				Log.i("YoumiAdDemo", "请求广告成功");
-
-			}
-
-			@Override
-			public void onFailedToReceivedAd(AdView arg0) {
-				Log.i("YoumiAdDemo", "请求广告失败");
-			}
-		});
-		*/
+		 * adView.setAdListener(new AdViewListener() {
+		 * 
+		 * @Override public void onSwitchedAd(AdView arg0) {
+		 * Log.i("YoumiAdDemo", "广告条切换"); }
+		 * 
+		 * @Override public void onReceivedAd(AdView arg0) {
+		 * Log.i("YoumiAdDemo", "请求广告成功");
+		 * 
+		 * }
+		 * 
+		 * @Override public void onFailedToReceivedAd(AdView arg0) {
+		 * Log.i("YoumiAdDemo", "请求广告失败"); } });
+		 */
 		/* 有米广告end */
 
 		// ...that is updated dynamically when files are scanned
@@ -317,9 +305,22 @@ public class ChoosePDFActivity extends Activity implements
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.action_about) {
-			Toast.makeText(ChoosePDFActivity.this, "About", Toast.LENGTH_SHORT).show();
+			AlertDialog.Builder dialog = new AlertDialog.Builder(
+					ChoosePDFActivity.this);
+			dialog.setTitle(R.string.action_about);
+			TextView v = new TextView(ChoosePDFActivity.this);
+			v.setText(getString(R.string.about_res));
+			v.setPadding(10, 10, 10, 10);
+			dialog.setView(v);
+			dialog.setPositiveButton(R.string.okay, new OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					dialog.dismiss();
+				}
+			});
+			dialog.create().show();
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
+
 }
